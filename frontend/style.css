@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+}
+
+.zeljko {
+    width: 25%;
+    height: auto;
+    border: 1px solid #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+
+.ana {
+    width: 25%;
+    height: auto;
+    border: 1px solid #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+.marija {
+    width: 25%;
+    height: auto;
+    border: 1px solid #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+.josip {
+    width: 25%;
+    height: auto;
+    border: 1px solid #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+
+.igraci {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 600px;
+    height: 600px;
+    background-color: #dddddd;
+}
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px;
+}
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    border-bottom: 1px solid #333;
+    padding: 10px;
+}
+
+.ukupniRez {
+    width: 300px;
+    height: auto;
+    border: 1px solid #333;
+    background-color: #dddddd;
+}
+
+.Rigraci {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    column-gap: 20px;
+}
+input{
+    width: 125px;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #a0a0a0;
+    border-radius: 5px;
+}
+button {
+    padding: 5px;
+    background-color: rgb(255, 174, 0);
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+
+}
+button:hover{
+    background-color: rgb(255, 217, 0);
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.anaBodovi, .josipBodovi, .marijaBodovi, .zeljkoBodovi {
+    display: flex;
+    flex-direction: column;
+    align-items: center !important;
+    width: auto;
+    height: 445px;
+
+}
+.josipBod, .anaBod, .marijaBod, .zeljkoBod {
+    font-size: 25px;
+}
+.dugmici{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
