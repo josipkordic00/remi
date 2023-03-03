@@ -4,12 +4,13 @@ fetch('http://localhost:3000/user')
     for(let i = 0; i < data.arr.length; i++){
     let name = data.arr[i].name;
     let dbUser = "#"+name+" span";
+    let dbUser2 = "."+name+" h1"+" span";
     
     document.querySelector(dbUser).innerText = data.arr[i].bodovi;
+    document.querySelector(dbUser2).innerText = data.arr[i].ostatak;
     }
+    
   });
-
-
 let win = document.querySelector("#win");
 win.style.display = "none";
 let anaSaveBtn = document.querySelector(".anaSave");
@@ -177,16 +178,32 @@ win.addEventListener("click", function(){
   winArr.push([zeljkoArr[zeljkoArr.length - 1], "zeljko"]);
   winArr.sort((a,b) => a[0] - b[0]);
   let winner = winArr[0][1]; //name
+  let marija = marijaArr[marijaArr.length - 1];
+  let ana = anaArr[anaArr.length - 1];
+  let zeljko = zeljkoArr[zeljkoArr.length - 1];
+  let josip = josipArr[josipArr.length - 1];
   let dbUser = "#"+ winner +" span";
   let q = document.querySelector(dbUser);
   let bodovi = parseInt(q.innerHTML) + 1; //bodovi
   alert("POBJEDNIK JE " + winner );
+  let ostatak = [marija, ana, josip, zeljko];
+  
+
   const requestOptions = {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ name: winner, bodovi: bodovi })
+    body: JSON.stringify({ name: winner, bodovi: bodovi})
   };
   fetch('http://localhost:3000/winner', requestOptions)
+    .then(response => response.json())
+    .then(data => console.log(data));
+  
+  const requestOptions2 = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ ostatak: ostatak})
+    };
+  fetch('http://localhost:3000/ostatak', requestOptions2)
     .then(response => response.json())
     .then(data => console.log(data));
   })
